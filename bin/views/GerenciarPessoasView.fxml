@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="550.0" minWidth="650.0" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.GerenciarPessoasController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Gerenciar Pessoas" textAlignment="CENTER" wrapText="false">
+         <font>
+            <Font size="18.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+         </textFill>
+      </Label>
+      <Label text="Pessoas cadastradas" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0" />
+      <ListView fx:id="pessoasCadastradas" onMouseClicked="#pessoasCadastradasAction" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="350.0" AnchorPane.topAnchor="100.0" />
+      <TextField fx:id="nome" prefWidth="300.0" promptText="Nome completo" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="100.0" /> 
+      <TextField fx:id="numero" layoutX="10.0" layoutY="10.0" prefWidth="300.0" promptText="Número para contato" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0" />
+      <TextField fx:id="email" layoutX="10.0" layoutY="10.0" prefWidth="300.0" promptText="Email" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="200.0" />
+      <DatePicker fx:id="nascimento" editable="false" prefWidth="300.0" promptText="Data de nascimento" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="250.0" />
+      <TextArea fx:id="historico" prefHeight="180.0" prefWidth="200.0" promptText="Historico" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="259.0" layoutY="262.0" mnemonicParsing="false" onAction="#excluirPessoa" style="-fx-background-color: red;" text="Excluir pessoa" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      <Button layoutX="269.0" layoutY="272.0" mnemonicParsing="false" onAction="#adicionarPessoa" style="-fx-background-color: green;" text="Adicionar pessoa" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

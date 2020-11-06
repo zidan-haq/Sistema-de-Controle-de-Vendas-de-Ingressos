@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="550.0" minWidth="650.0" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.GerenciarVagasController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Gerenciar Vagas" textAlignment="CENTER" wrapText="false">
+         <font>
+            <Font size="18.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+         </textFill>
+      </Label>
+      <CheckBox fx:id="reservarVaga" layoutX="266.0" layoutY="50.0" mnemonicParsing="false" text="Reservar vaga" AnchorPane.topAnchor="50.0" />
+      <Label text="Vagas cadastradas" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="85.0" />
+      <ListView fx:id="vagasCadastradas" onMouseClicked="#vagasCadastradasAction" prefHeight="200.0" prefWidth="300.0" AnchorPane.bottomAnchor="250.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="100.0" />
+      <HBox layoutX="400.0" layoutY="100.0">
+         <children>
+            <Label text="Número da vaga: " />
+            <Label fx:id="numeroDaVaga" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <HBox layoutX="20.0" layoutY="20.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="135.0">
+         <children>
+            <Label text="Situação da vaga: " />
+            <Label fx:id="situacao" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="30.0" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <Label text="Valor da vaga: " />
+            <Label fx:id="valorDaVaga" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#venderIngressoAction" style="-fx-background-color: #155663;" text="Vender ingresso" textFill="WHITE" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="210.0" />
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelarVendaAction" style="-fx-background-color: #8f1818;" text="Cancelar venda" textFill="WHITE" AnchorPane.leftAnchor="400.0" AnchorPane.topAnchor="260.0" />
+      <TextArea fx:id="detalhes" prefHeight="180.0" prefWidth="200.0" promptText="Detalhes da vaga" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+      <Button layoutX="259.0" layoutY="262.0" mnemonicParsing="false" onAction="#limparAlteracoesAction" style="-fx-background-color: red;" text="Limpar alterações" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" />
+      <Button layoutX="269.0" layoutY="272.0" mnemonicParsing="false" onAction="#salvarAlteracoesAction" style="-fx-background-color: green;" text="Salvar alterações" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

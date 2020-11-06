@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="550.0" minWidth="650.0" prefHeight="550.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.DetalhesVendasController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" style="&#10;" text="Detalhes de vendas" textAlignment="CENTER" wrapText="false">
+         <font>
+            <Font size="18.0" fx:id="x1" />
+         </font>
+         <textFill>
+            <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+         </textFill>
+      </Label>
+      <ComboBox fx:id="selecioneUmEvento" onAction="#selecioneUmEventoAction" prefWidth="200.0" promptText="Selecione um evento" AnchorPane.leftAnchor="240.0" AnchorPane.topAnchor="15.0" />
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" spacing="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Vagas vendidas:" />
+                  <Label fx:id="vagasVendidas" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Vagas reservadas:" />
+                  <Label fx:id="vagasReservadas" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Vagas disponiveis:" />
+                  <Label fx:id="vagasDisponiveis" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="15.0" layoutY="20.0" spacing="50.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="100.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label text="Faturamento:" />
+                  <Label fx:id="faturamento" />
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Label text="Data do evento:" />
+                  <Label fx:id="data_evento" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="20.0" prefWidth="620.0" spacing="20.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="160.0">
+         <children>
+            <Label text="Ordenar por:" />
+            <RadioButton fx:id="ordenarMaisVendidos" mnemonicParsing="false" onAction="#selecaoOrdenarPor" text="Mais vendidos" />
+            <RadioButton fx:id="ordenarQuantidadeVagas" mnemonicParsing="false" onAction="#selecaoOrdenarPor" text="Quantidade de vagas" />
+            <RadioButton fx:id="ordenarMaisProximos" mnemonicParsing="false" onAction="#selecaoOrdenarPor" text="Mais próximos" />
+         </children>
+      </HBox>
+      <BarChart fx:id="grafico" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="180.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Arc?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="600.0" maxWidth="400.0" minHeight="400.0" minWidth="600.0" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.VenderIngressoController">
+   <children>
+      <Label fx:id="nome_evento" alignment="CENTER" text="Nome do evento" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0" />
+      <HBox AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="50.0">
+         <children>
+            <Label text="Número da vaga: " />
+            <Label fx:id="numero_vaga" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <HBox AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="80.0">
+         <children>
+            <Label text="Situação da vaga: " />
+            <Label fx:id="situacao_vaga" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <HBox AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="110.0">
+         <children>
+            <Label text="Valor da vaga: " />
+            <Label fx:id="valor_vaga" textFill="#2805ff" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="140.0">
+         <children>
+            <Label text="Desconto: " />
+            <TextField fx:id="desconto" maxHeight="15.0" prefWidth="80.0">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+      <HBox layoutX="10.0" layoutY="10.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="170.0">
+         <children>
+            <Label text="Valor total: " />
+            <Label fx:id="valor_total" />
+         </children>
+      </HBox>
+      <TextArea fx:id="detalhes_vaga" layoutY="43.0" prefHeight="152.0" prefWidth="275.0" promptText="Detalhes da vaga" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="50.0" />
+      <Label text="Vender para:" AnchorPane.bottomAnchor="150.0" AnchorPane.leftAnchor="15.0" />
+      <VBox alignment="TOP_CENTER" layoutX="405.0" layoutY="15.0" onMouseClicked="#cadastradosAction" prefHeight="80.0" prefWidth="90.0" style="-fx-background-color: lightblue;" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="40.0">
+         <children>
+            <Circle fill="#0099bc" radius="15.0" stroke="#0099bc" strokeType="INSIDE" />
+            <Arc fill="#0099bc" length="180.0" radiusX="25.0" radiusY="25.0" startAngle="360.0" stroke="#0099bc" strokeType="INSIDE" type="ROUND" />
+            <Label style="-fx-text-fill: #0030bc;" text="Cadastrados" />
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </VBox>
+      <Separator prefWidth="200.0" AnchorPane.bottomAnchor="180.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+      <Separator layoutX="179.0" layoutY="250.0" orientation="VERTICAL" prefHeight="100.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="170.0" />
+      <VBox spacing="5.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="210.0" AnchorPane.rightAnchor="20.0">
+         <children>
+            <TextField fx:id="nome_pessoa" prefWidth="300.0" promptText="Nome completo" />
+            <TextField fx:id="numero_pessoa" prefWidth="300.0" promptText="Número para contato" />
+            <TextField fx:id="email_pessoa" prefWidth="300.0" promptText="Email" />
+            <DatePicker fx:id="nascimento_pessoa" editable="false" prefWidth="250.0" promptText="Data de nascimento" />
+         </children>
+      </VBox>
+      <Button mnemonicParsing="false" onAction="#venderAction" style="-fx-background-color: green;" text="Vender" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
+   </children>
+</AnchorPane>

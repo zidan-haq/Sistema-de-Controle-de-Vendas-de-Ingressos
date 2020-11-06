@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="570.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="viewControllers.MainController">
+   <children>
+      <SplitPane dividerPositions="0.2505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <items>
+            <AnchorPane maxWidth="400.0">
+               <children>
+                  <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Controle de ingressos" textAlignment="CENTER" wrapText="false">
+                     <font>
+                        <Font size="18.0" fx:id="x1" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                     </textFill>
+                  </Label>
+                  <Label fx:id="eventoAtual" alignment="CENTER" layoutX="24.0" layoutY="24.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Selecione um evento" textAlignment="CENTER" wrapText="false" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="70.0">
+                     <font>
+                        <Font size="18.0" fx:id="x11" />
+                     </font>
+                  </Label>
+                  <Button layoutX="41.0" layoutY="133.0" mnemonicParsing="false" onAction="#telaPrincipalAction" style="-fx-background-color: #2960a3;" text="Tela principal" textFill="WHITE" AnchorPane.leftAnchor="41.0" AnchorPane.rightAnchor="41.0" AnchorPane.topAnchor="133.0" />
+                  <Button layoutX="40.0" layoutY="183.0" mnemonicParsing="false" onAction="#gerenciarVagasAction" style="-fx-background-color: #9c4c44;" text="Gerenciar vagas" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="233.0" />
+                  <Button layoutX="36.0" layoutY="233.0" mnemonicParsing="false" onAction="#gerenciarEventosAction" style="-fx-background-color: #28802a;" text="Gerenciar eventos" textFill="#dddddd" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="283.0" />
+                  <Button layoutX="36.0" layoutY="286.0" mnemonicParsing="false" onAction="#gerenciarPessoasAction" prefHeight="26.0" prefWidth="141.0" style="-fx-background-color: #602a7d;" text="Gerenciar pessoas" textFill="#dddddd" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="333.0" />
+                  <Button mnemonicParsing="false" onAction="#detalhesDeVendasAction" style="-fx-background-color: #111111;" text="Detalhes de vendas" textFill="#dddddd" AnchorPane.leftAnchor="36.0" AnchorPane.rightAnchor="36.0" AnchorPane.topAnchor="433.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="550.0" minWidth="650.0" prefHeight="550.0" prefWidth="650.0">
+               <children>
+                  <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Principal" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                  <ComboBox fx:id="selecioneUmEvento" layoutX="16.0" layoutY="48.0" onAction="#selecioneUmEventoAction" prefWidth="200.0" promptText="Selecione um evento" style="-fx-background-color: #529efa;" />
+                  <PieChart fx:id="graficoDePizza" layoutY="4.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="85.0" AnchorPane.rightAnchor="85.0" AnchorPane.topAnchor="80.0" />
+                  <HBox alignment="CENTER" layoutX="40.0" layoutY="504.0" spacing="20.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label style="&#10;" text="Quantidade de vagas:" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x121" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="quantidadeDeVagas" style="&#10;" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x1211" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label style="&#10;" text="Vagas disponíveis:" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x1211" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vagasDisponiveis" style="&#10;" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x12111" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label style="&#10;" text="Vagas vendidas:" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x12111" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vagasVendidas" style="&#10;" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x121111" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox spacing="5.0">
+                           <children>
+                              <Label style="&#10;" text="Vagas reservadas:" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x121111" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="vagasReservadas" style="&#10;" wrapText="false">
+                                 <font>
+                                    <Font size="11.0" fx:id="x1211111" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <Pane maxHeight="10.0" minHeight="10.0" prefHeight="10.0" prefWidth="200.0" style="-fx-background-color: #2960a3;" />
+   </children>
+</VBox>
